@@ -44,5 +44,5 @@ Arguments in [`configs.py`](model/configs.py):
 | :--- | :--- | :---: | :---:
 `--dataset` | Used dataset in experimental evaluations. | 'SumMe' | 'SumMe', 'TVSum'
 `--replacement_method` | Applied replacement function on input data. | 'slice-out' | 'slice-out', 'input-mask', 'random', 'attention-mask'
-`--replaced_fragments` | Amount of replaced fragments. | 'batch' | 'single', 'batch'
+`--replaced_fragments` | Amount of replaced fragments. | 'batch' | 'batch', 'single'
 `--visual_mask` | Visual mask used for input replacement. | 'black-frame' | 'black-frame', 'white-frame'
