@@ -36,24 +36,13 @@ Original videos and annotations for each dataset are also available in the datas
 <div align="justify">
 
 Setup for the experimental evaluation:
- - In [`main.py`](model/main.py#L7), define the directory where the analysis results will be saved to. </div>
- - In [`data_loader.py`](model/data_loader.py#L19:L21), specify the path to the h5 file of the used dataset, and the path to the JSON file containing data about the utilized data splits.
+ - In [`main.py`](model/main.py#L63), specify the path to the pretrained models of the CA-SUM network for video summarization. </div>
+ - In [`data_loader.py`](model/data_loader.py#L19:L20), specify the path to the h5 file of the used dataset, and the path to the JSON file containing data about the utilized data splits.
    
 Arguments in [`configs.py`](model/configs.py): 
 |Parameter name | Description | Default Value | Options
 | :--- | :--- | :---: | :---:
-`--mode` | Mode for the configuration. | 'train' | 'train', 'test'
-`--verbose` | Print or not training messages. | 'false' | 'true', 'false'
-`--video_type` | Used dataset for training the model. | 'SumMe' | 'SumMe', 'TVSum'
-`--input_size` | Size of the input feature vectors. | 1024 | int > 0
-`--block_size` | Size of the blocks utilized inside the attention matrix. | 60 | 0 < int ≤ 60
-`--init_type` | Weight initialization method. | 'xavier' | None, 'xavier', 'normal', 'kaiming', 'orthogonal'
-`--init_gain` | Scaling factor for the initialization methods. | √2 | None, float
-`--n_epochs` | Number of training epochs. | 400 | int > 0
-`--batch_size` | Size of the training batch, 20 for 'SumMe' and 40 for 'TVSum'. | 20 | 0 < int ≤ len(Dataset)
-`--seed` | Chosen number for generating reproducible random numbers. | 12345 | None, int
-`--clip` | Gradient norm clipping parameter. | 5 | float 
-`--lr` | Value of the adopted learning rate. | 5e-4 | float
-`--l2_req` | Value of the weight regularization factor. | 1e-5 | float
-`--reg_factor` | Value of the length regularization factor. | 0.6 | 0 < float ≤ 1
-`--split_index` | Index of the utilized data split. | 0 | 0 ≤ int ≤ 4
+`--dataset` | Used dataset in experimental evaluations. | 'SumMe' | 'SumMe', 'TVSum'
+`--replacement_method` | Applied replacement function on input data. | 'slice-out' | 'slice-out', 'input-mask', 'random', 'attention-mask'
+`--replaced_fragments` | Amount of replaced fragments. | 'batch' | 'single', 'batch'
+`--visual_mask` | Visual mask used for input replacement. | 'black-frame' | 'black-frame', 'white-frame'
