@@ -3,7 +3,7 @@
 ## PyTorch Implementation of our Attention-based Method for Explainable Video Summarization
 - From **"Explaining video summarization based on the focus of attention"**, Proc. of the IEEE Int. Symposium on Multimedia (ISM), Dec. 2022.
 - Written by Evlampios Apostolidis, Georgios Balaouras, Vasileios Mezaris and Ioannis Patras
-- This software can be used for...
+- This software can be used for studying our method for producing attention-based explanations for the outcomes of the [CA-SUM](https://github.com/e-apostolidis/CA-SUM) model for video summarization, and re-producing the reported exprerimental results in our paper. 
 
 ## Main dependencies
 Developed, checked and verified on an `Ubuntu 20.04.3` PC with an `NVIDIA RTX 2080Ti` GPU and an `i5-11600K` CPU. Main packages required:
