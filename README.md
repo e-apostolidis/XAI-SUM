@@ -35,7 +35,7 @@ Original videos and annotations for each dataset are also available in the datas
 ## Running an experiment
 <div align="justify">
 
-To run an experiment using one of the aforementioned datasets and considering all of its randomly-generated splits that are stored in the JSON file included in the [data/splits](/data/splits) directory, execute the following command:
+To run an experiment using one of the aforementioned datasets and considering all of its randomly-generated splits (stored in the JSON file included in the [data/splits](/data/splits) directory), execute the following command:
 
 ```
 python model/main.py --dataset 'dataset_name' --replacement_function 'repl_function_name' --replaced_fragments 'set_of_repl_fragments' --visual_mask 'mask_name'
