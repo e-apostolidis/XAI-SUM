@@ -36,8 +36,8 @@ Original videos and annotations for each dataset are also available in the datas
 <div align="justify">
 
 Setup for the experimental evaluation:
- - In [`main.py`](model/main.py#L63), specify the path to the pretrained models of the CA-SUM network for video summarization. </div>
- - In [`data_loader.py`](model/data_loader.py#L19:L20), specify the paths to the h5 file of the used dataset, and the JSON file containing data about the used data splits.
+ - In [`main.py`](model/main.py#L63), specify the path to the pretrained models of the CA-SUM network for video summarization. 
+ - In [`data_loader.py`](model/data_loader.py#L19:L20), specify the paths to the h5 file of the used dataset, and the JSON file containing data about the used data splits.</div>
    
 Arguments in [`configs.py`](model/configs.py): 
 |Parameter name | Description | Default Value | Options
