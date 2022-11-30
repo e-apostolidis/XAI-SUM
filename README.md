@@ -32,6 +32,30 @@ Original videos and annotations for each dataset are also available in the datas
 - <a href="https://github.com/yalesong/tvsum" target="_blank"><img align="center" src="https://img.shields.io/badge/Dataset-TVSum-green"/></a> <a href="https://gyglim.github.io/me/vsum/index.html#benchmark" target="_blank"><img align="center" src="https://img.shields.io/badge/Dataset-SumMe-blue"/></a>
 </div>
 
+## Running an experiment
+<div align="justify">
+
+To run an experiment using one of the aforementioned datasets and its five randomly created splits (where in each split 80% of the data is used for training and 20% for testing) use the corresponding JSON file that is included in the [data/splits](/data/splits) directory. This file contains the 5 randomly-generated splits that were utilized in our experiments.
+
+For training the model using a single split, run:
+```
+    python model/main.py --dataset 'dataset_name' --replacement_function 'function_name' --replaced_fragments 'amount' --visual_mask 'mask_name'
+```
+where, `N` refers to the index of the used data split, `E` refers to the number of training epochs, `B` refers to the batch size, `dataset_name` refers to the name of the used dataset, and `$sigma` refers to the length regularization factor, a hyper-parameter of our method that relates to the length of the generated summary.
+
+Alternatively, to train the model for all 5 splits, use the [`run_summe_splits.sh`](model/run_summe_splits.sh) and/or [`run_tvsum_splits.sh`](model/run_tvsum_splits.sh) script and do the following:
+```shell-script
+chmod +x model/run_summe_splits.sh    # Makes the script executable.
+chmod +x model/run_tvsum_splits.sh    # Makes the script executable.
+./model/run_summe_splits.sh           # Runs the script. 
+./model/run_tvsum_splits.sh           # Runs the script.  
+```
+Please note that after each training epoch the algorithm performs an evaluation step, using the trained model to compute the importance scores for the frames of each video of the test set. These scores are then used by the provided [evaluation](evaluation) scripts to assess the overall performance of the model.
+
+The progress of the training can be monitored via the TensorBoard platform and by:
+- opening a command line (cmd) and running: `tensorboard --logdir=/path/to/log-directory --host=localhost`
+- opening a browser and pasting the returned URL from cmd. </div>
+
 ## Configurations
 <div align="justify">
 
