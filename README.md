@@ -8,7 +8,7 @@
 ## Main dependencies
 Developed, checked and verified on an `Ubuntu 20.04.3` PC with an `NVIDIA RTX 2080Ti` GPU and an `i5-11600K` CPU. Main packages required:
 |`Python` | `PyTorch` | `CUDA Version` | `cuDNN Version` | `NumPy` | `H5py`
-:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+:---:|:---:|:---:|:---:|:---:|:---:|
 3.8(.8) | 1.7.1 | 11.0 | 8005 | 1.20.2 | 2.10.0
 
 ## Data
