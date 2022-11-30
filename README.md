@@ -35,26 +35,14 @@ Original videos and annotations for each dataset are also available in the datas
 ## Running an experiment
 <div align="justify">
 
-To run an experiment using one of the aforementioned datasets and its five randomly created splits (where in each split 80% of the data is used for training and 20% for testing) use the corresponding JSON file that is included in the [data/splits](/data/splits) directory. This file contains the 5 randomly-generated splits that were utilized in our experiments.
+To run an experiment using one of the aforementioned datasets and considering all of its randomly-generated splits that are stored in the JSON file included in the [data/splits](/data/splits) directory, execute the following command:
 
-For training the model using a single split, run:
 ```
-    python model/main.py --dataset 'dataset_name' --replacement_function 'function_name' --replaced_fragments 'amount' --visual_mask 'mask_name'
+python model/main.py --dataset 'dataset_name' --replacement_function 'repl_function_name' --replaced_fragments 'set_of_repl_fragments' --visual_mask 'mask_name'
 ```
-where, `N` refers to the index of the used data split, `E` refers to the number of training epochs, `B` refers to the batch size, `dataset_name` refers to the name of the used dataset, and `$sigma` refers to the length regularization factor, a hyper-parameter of our method that relates to the length of the generated summary.
+where, `dataset_name` refers to the name of the used dataset, `repl_function_name` refers to the applied replacement function in fragments of the input data, `set_of_repl_fragments` refers to the amount of replaced fragments of the input data, and `mask_name` refers to the type of the used mask for replacing fragments of the input data.
 
-Alternatively, to train the model for all 5 splits, use the [`run_summe_splits.sh`](model/run_summe_splits.sh) and/or [`run_tvsum_splits.sh`](model/run_tvsum_splits.sh) script and do the following:
-```shell-script
-chmod +x model/run_summe_splits.sh    # Makes the script executable.
-chmod +x model/run_tvsum_splits.sh    # Makes the script executable.
-./model/run_summe_splits.sh           # Runs the script. 
-./model/run_tvsum_splits.sh           # Runs the script.  
-```
-Please note that after each training epoch the algorithm performs an evaluation step, using the trained model to compute the importance scores for the frames of each video of the test set. These scores are then used by the provided [evaluation](evaluation) scripts to assess the overall performance of the model.
-
-The progress of the training can be monitored via the TensorBoard platform and by:
-- opening a command line (cmd) and running: `tensorboard --logdir=/path/to/log-directory --host=localhost`
-- opening a browser and pasting the returned URL from cmd. </div>
+After executing the above command you get the results for each different data split, as well as the overall results that are computed by averaging the obtained scores across data splits. The overall results correspond to the ones reported in Table 1 of our paper for the different replacement functions. Please note that, the results when fragments' replacement is based on "Randomization" might be slightly different from the reported ones, as we did not use a fixed seed value in our experiments.
 
 ## Configurations
 <div align="justify">
