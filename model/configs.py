@@ -28,7 +28,6 @@ def get_config(parse=True, **optional_kwargs):
 
     # Settings
     parser.add_argument('--dataset', type=str, default='SumMe', help='Dataset to be used [SumMe / TVSum]')
-    # parser.add_argument('--split_index', type=int, default=0, help='Data split to be used [0-4]')
     parser.add_argument('--replacement_method', type=str, default='slice-out', help='Applied replacement function [slice-out, input-mask, random, attention-mask]')
     parser.add_argument('--replaced_fragments', type=str, default='batch', help='Amount of replaced fragments [batch / single]')
     parser.add_argument('--visual_mask', type=str, default='black-frame', help='Type of visual mask [black-frame / white-frame]')
