@@ -67,6 +67,18 @@ If you find our work, code or pretrained models, useful in your work, please cit
 E. Apostolidis, G. Balaouras, V. Mezaris, I. Patras, "<b>Explaining Video Summarization Based on the Focus of Attention</b>", Proc. IEEE Int. Symposium on Multimedia (ISM), Dec. 2022.
 </div>
 
+BibTeX:
+
+```
+@INPROCEEDINGS{9666088,
+    author    = {Apostolidis, Evlampios and Balaouras, Georgios and Mezaris, Vasileios and Patras, Ioannis},
+    title     = {Explaining Video Summarization Based on the Focus of Attention},
+    booktitle = {2022 IEEE International Symposium on Multimedia (ISM)},
+    month     = {December},
+    year      = {2022}
+}
+```
+
 ## License
 <div align="justify">
 
