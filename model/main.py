@@ -48,7 +48,6 @@ if __name__ == "__main__":
     # Get the experimental settings
     config = get_config()
     dataset = config.dataset                    # SumMe, TVSum
-    # split_id = config.split_index               # [0, 4]
     repl_method = config.replacement_method     # slice-out, input-mask, random, attention-mask
     repl_fragments = config.replaced_fragments  # batch, single
     visual_mask = config.visual_mask
