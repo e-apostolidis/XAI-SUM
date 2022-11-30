@@ -46,3 +46,25 @@ Arguments in [`configs.py`](model/configs.py):
 `replacement_method` | Applied replacement function. | 'slice-out' | 'slice-out', 'input-mask', 'random', 'attention-mask'
 `replaced_fragments` | Amount of replaced fragments. | 'batch' | 'batch', 'single'
 `visual_mask` | Visual mask used for replacement. | 'black-frame' | 'black-frame', 'white-frame'
+
+## Citation
+<div align="justify">
+    
+If you find our work, code or pretrained models, useful in your work, please cite the following publication:
+
+E. Apostolidis, G. Balaouras, V. Mezaris, I. Patras, "<b>Explaining Video Summarization Based on the Focus of Attention</b>", Proc. IEEE Int. Symposium on Multimedia (ISM), Dec. 2022.
+</div>
+
+## License
+<div align="justify">
+
+Copyright (c) 2022, Evlampios Apostolidis, Georgios Balaouras, Vasileios Mezaris, Ioannis Patras / CERTH-ITI. All rights reserved. This code is provided for academic, non-commercial use only. Redistribution and use in source and binary forms, with or without modification, are permitted for academic non-commercial use provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation provided with the distribution.
+
+This software is provided by the authors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the authors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.
+</div>
+
+## Acknowledgement
+<div align="justify"> This work was supported by the EU Horizon 2020 programme under grant agreement H2020-951911 AI4Media. </div>
