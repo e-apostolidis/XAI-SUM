@@ -38,7 +38,7 @@ Original videos and annotations for each dataset are also available in the datas
 To run an experiment using one of the aforementioned datasets and considering all of its randomly-generated splits (stored in the JSON file included in the [data/splits](/data/splits) directory), execute the following command:
 
 ```
-python model/main.py --dataset 'dataset_name' --replacement_function 'repl_function_name' --replaced_fragments 'set_of_repl_fragments' --visual_mask 'mask_name'
+python model/main.py --dataset 'dataset_name' --replacement_method 'repl_function_name' --replaced_fragments 'set_of_repl_fragments' --visual_mask 'mask_name'
 ```
 where, `dataset_name` refers to the name of the used dataset, `repl_function_name` refers to the applied replacement function in fragments of the input data, `set_of_repl_fragments` refers to the amount of replaced fragments of the input data, and `mask_name` refers to the type of the used mask for replacing fragments of the input data.
 
