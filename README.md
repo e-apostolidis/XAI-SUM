@@ -38,7 +38,7 @@ Original videos and annotations for each dataset are also available in the datas
 To run an experiment using one of the aforementioned datasets and considering all of its randomly-generated splits (stored in the JSON file included in the [data/splits](/data/splits) directory), execute the following command:
 
 ```
-python model/main.py --summarization_method 'method_name' --dataset 'dataset_name' --replacement_method 'replacement_method_name' --replaced_fragments 'set_of_repl_fragments' --visual_mask 'visual_mask_name'
+python main.py --summarization_method 'method_name' --dataset 'dataset_name' --replacement_method 'replacement_method_name' --replaced_fragments 'set_of_repl_fragments' --visual_mask 'visual_mask_name'
 ```
 where, `method_name` refers to the name of the used video summarization method, `dataset_name` refers to the name of the used dataset, `replacement_method_name` refers to the applied replacement function in fragments of the input data, `set_of_repl_fragments` refers to the amount of replaced fragments of the input data, and `visual_mask_name` refers to the type of the used mask when replacing fragments of the input data.
 
@@ -48,8 +48,8 @@ After executing the above command you get the overall results for each different
 <div align="justify">
 
 Setup for the experimental evaluation:
- - In [`main.py`](main.py#L66:L80), specify the path to the pretrained models of the used method for video summarization. 
- - In [`data_loader.py`](data_loader.py#L19:L20), specify the paths to the h5 file of the used dataset, and the JSON file containing data about the used data splits.</div>
+ - In [`main.py`](main.py), specify the path to the pretrained models of the used method for video summarization. 
+ - In [`data_loader.py`](data_loader.py), specify the paths to the h5 file of the used dataset, and the JSON file containing data about the used data splits.</div>
    
 Arguments in [`configs.py`](configs.py): 
 |Parameter name | Description | Default Value | Options
