@@ -1,8 +1,8 @@
 # A Study on the Use of Attention for Explaining Video Summarization
 
 ## PyTorch implementation of the software used in:
-- **"Explaining Video Summarization Based on the Focus of Attention"**, Proc. of the IEEE Int. Symposium on Multimedia (ISM), Dec. 2022. (written by Evlampios Apostolidis, Georgios Balaouras, Vasileios Mezaris and Ioannis Patras)
 - **"A Study on the Use of Attention for Explaining Video Summarization"**, Proc. of the NarSUM workshop at ACM Multimedia 2023 (ACM MM), Oct.-Nov. 2023. (written by Evlampios Apostolidis, Vasileios Mezaris and Ioannis Patras)
+- **"Explaining Video Summarization Based on the Focus of Attention"**, Proc. of the IEEE Int. Symposium on Multimedia (ISM), Dec. 2022. (written by Evlampios Apostolidis, Georgios Balaouras, Vasileios Mezaris and Ioannis Patras)
 - This software can be used for studying our method for producing explanations for the outcomes of attention-based video summarization models, and re-producing the reported exprerimental results in our papers. 
 
 ## Main dependencies
